@@ -20,6 +20,7 @@ const Login: FC<landingScreenProps> = ({navigation}) => {
   const [password, setPassword] = useState('');
   const [usernameError, setUsernameError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
+  const [secure, setSecure] = useState(true);
 
   const handleLogin = () => {
     setPasswordError(false);
@@ -64,11 +65,17 @@ const Login: FC<landingScreenProps> = ({navigation}) => {
             placeholderTextColor={'gray'}
             selectionColor={'gray'}
             testID="password"
-            secureTextEntry
+            secureTextEntry={secure}
             onChangeText={val => setPassword(val)}
           />
-          <TouchableOpacity>
-            <Ionicons name="eye-outline" size={30} color={'#313131'} />
+          <TouchableOpacity
+            activeOpacity={0.8}
+            onPress={() => setSecure(!secure)}>
+            {secure ? (
+              <Ionicons name="eye-outline" size={30} color={'#313131'} />
+            ) : (
+              <Ionicons name="eye-off-outline" size={30} color={'#313131'} />
+            )}
           </TouchableOpacity>
         </View>
         {passwordError && (
