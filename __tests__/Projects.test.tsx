@@ -1,15 +1,12 @@
 import 'react-native';
 import React from 'react';
 import {describe} from '@jest/globals';
-import {render, screen, fireEvent} from '@testing-library/react-native';
+import {render} from '@testing-library/react-native';
 
 import {
   projectsScreenNavigationProps,
   projectsScreenRouteType,
 } from '../src/navigation/types';
-import CustomButton from '../src/component/CustomButton';
-import ListComponent from '../src/component/ListComponent';
-import ActionButton from '../src/component/ActionButton';
 import Projects from '../src/screens/Projects';
 import ProjectItem from '../src/component/ProjectItem';
 const navigation = {

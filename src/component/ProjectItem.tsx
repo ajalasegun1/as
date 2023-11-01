@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import React, {FC} from 'react';
 import Animated from 'react-native-reanimated';
-import {RootStackParamList, projectsScreenProps} from '../navigation/types';
+import {RootStackParamList} from '../navigation/types';
 import {StackNavigationProp} from '@react-navigation/stack';
 
 const ProjectItem: FC<{

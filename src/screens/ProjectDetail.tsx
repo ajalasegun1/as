@@ -7,7 +7,6 @@ import {
   Linking,
 } from 'react-native';
 import React, {FC} from 'react';
-import Animated from 'react-native-reanimated';
 import {projectDetailScreenProps} from '../navigation/types';
 import CustomButton from '../component/CustomButton';
 
