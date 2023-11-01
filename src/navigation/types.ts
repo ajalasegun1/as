@@ -5,6 +5,16 @@ export type RootStackParamList = {
   landing: undefined;
   home: undefined;
   projects: undefined;
+  projectDetail: {
+    item: {
+      name: string;
+      tags: string[];
+      details: string;
+      tools: string[];
+      image: any;
+      url: string;
+    };
+  };
 };
 
 export type landingScreenProps = StackScreenProps<
@@ -29,4 +39,26 @@ export type homeScreenRouteType = RouteProp<RootStackParamList, 'home'>;
 export type projectsScreenProps = StackScreenProps<
   RootStackParamList,
   'projects'
+>;
+
+export type projectsScreenNavigationProps = StackNavigationProp<
+  RootStackParamList,
+  'projects',
+  undefined
+>;
+
+export type projectsScreenRouteType = RouteProp<RootStackParamList, 'projects'>;
+
+export type projectDetailScreenProps = StackScreenProps<
+  RootStackParamList,
+  'projectDetail'
+>;
+export type projectDetailScreenNavigationProps = StackNavigationProp<
+  RootStackParamList,
+  'projectDetail',
+  undefined
+>;
+export type projectDetailRouteType = RouteProp<
+  RootStackParamList,
+  'projectDetail'
 >;

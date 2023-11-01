@@ -19,7 +19,7 @@ const navigation = {
 } as unknown as homeScreenNavigationType;
 const route = jest.fn() as unknown as homeScreenRouteType;
 
-describe('Login Screen', () => {
+describe('Home Screen', () => {
   test('renders home screen correctly', () => {
     render(<Home navigation={navigation} route={route} />);
   });

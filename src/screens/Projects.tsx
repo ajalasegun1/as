@@ -1,14 +1,19 @@
 import {ScrollView, StyleSheet, Text, View} from 'react-native';
-import React from 'react';
+import React, {FC} from 'react';
 import {PROJECTS} from '../constants';
 import ProjectItem from '../component/ProjectItem';
+import {projectsScreenProps} from '../navigation/types';
 
-const Projects = () => {
+const Projects: FC<projectsScreenProps> = ({navigation}) => {
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.scroll}>
       <Text style={styles.projectText}>Projects</Text>
       {PROJECTS.map((item, index) => (
-        <ProjectItem key={index.toString()} item={item} />
+        <ProjectItem
+          key={index.toString()}
+          item={item}
+          navigation={navigation}
+        />
       ))}
     </ScrollView>
   );
@@ -23,13 +28,16 @@ const styles = StyleSheet.create({
     paddingTop: 30,
   },
   scroll: {
-    flex: 1,
+    flexGrow: 1,
     paddingHorizontal: 10,
+    paddingBottom: 40,
   },
   projectText: {
     fontSize: 30,
     fontWeight: '700',
     textAlign: 'center',
     letterSpacing: 1.5,
+    marginBottom: 20,
+    color: '#313131',
   },
 });
