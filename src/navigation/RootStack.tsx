@@ -4,6 +4,7 @@ import {RootStackParamList} from './types';
 import {NavigationContainer} from '@react-navigation/native';
 import Login from '../screens/Login';
 import Home from '../screens/Home';
+import Projects from '../screens/Projects';
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -16,6 +17,7 @@ const RootStack = () => {
         }}>
         <Stack.Screen name="landing" component={Login} />
         <Stack.Screen name="home" component={Home} />
+        <Stack.Screen name="projects" component={Projects} />
       </Stack.Navigator>
     </NavigationContainer>
   );

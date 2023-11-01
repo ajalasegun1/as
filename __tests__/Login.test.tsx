@@ -23,7 +23,7 @@ describe('Login Screen', () => {
 
   test('Login button calls onLogin function on press', () => {
     const onLogin = jest.fn();
-    render(<CustomButton text="Login" onPress={onLogin} />);
+    render(<CustomButton text="Login" onPress={onLogin} testID="loginBtn" />);
 
     const loginBtn = screen.getByTestId('loginBtn');
 

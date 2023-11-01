@@ -76,7 +76,7 @@ const Login: FC<landingScreenProps> = ({navigation}) => {
         )}
       </View>
 
-      <CustomButton onPress={handleLogin} text="Login" />
+      <CustomButton onPress={handleLogin} text="Login" testID="loginBtn" />
     </View>
   );
 };
